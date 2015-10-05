@@ -10,6 +10,8 @@ ENV PATH $GOPATH/bin:/usr/local/go/bin:$PATH
 
 RUN go get github.com/tools/godep
 
+RUN echo "Cloning Stopwatch Repo..."
+
 RUN git clone https://github.com/Bjorn248/ec2-stopwatch.git /opt/stopwatch
 
 WORKDIR /opt/stopwatch
