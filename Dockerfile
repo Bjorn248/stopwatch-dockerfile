@@ -18,4 +18,5 @@ WORKDIR /opt/stopwatch
 RUN which godep
 RUN godep restore
 RUN ./build.sh
+EXPOSE 4000
 ENTRYPOINT [ "./stopwatch" ]
