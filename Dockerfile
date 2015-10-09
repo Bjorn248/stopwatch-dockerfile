@@ -16,4 +16,7 @@ WORKDIR /opt/stopwatch
 RUN which godep
 RUN godep restore
 RUN ./build.sh
-ENTRYPOINT [ "./stopwatch" ]
+ADD start.sh /opt/stopwatch/start.sh
+RUN chmod +x /opt/stopwatch/start.sh
+EXPOSE 4000
+ENTRYPOINT [ "./start.sh" ]
